@@ -1,0 +1,227 @@
+/* Estilo do corpo e do fundo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo do cabeçalho */
+header {
+    background-color: #222;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo img {
+    width: 150px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Estilo da seção inicial */
+.hero {
+    background-color: #ff6600;
+    text-align: center;
+    padding: 150px 0;
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #222;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.cta-button:hover {
+    background-color: #ff4400;
+}
+
+/* Estilo da seção de planos */
+.planos-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.plano {
+    background-color: #ff4400;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+    margin: 10px;
+}
+
+.plano h3 {
+    font-size: 24px;
+}
+
+.plano p {
+    font-size: 18px;
+}
+
+/* Estilo da seção "Sobre Nós" */
+.sobre-container {
+    background-color: #ff6600;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Estilo da seção de contato */
+.contato-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: #ff4400;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Estilo do rodapé */
+footer {
+    text-align: center;
+    background-color: #222;
+    color: #fff;
+    padding: 10px 0;
+}
+
+/* Estilização de links */
+a {
+    text-decoration: none;
+    color: #ff6600;
+}
+
+a:hover {
+    color: #ff4400;
+}
+
+/* Estilo do botão do WhatsApp */
+.whatsapp-button {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Estilo do botão flutuante do WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.whatsapp-float a {
+    display: inline-block;
+    background-color: #25d366; /* Cor do WhatsApp */
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.whatsapp-float a img {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.whatsapp-float a:hover {
+    background-color: #128C7E; /* Cor de destaque ao passar o mouse */
+}
+/* Estilos para o formulário de checkout */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.form-row {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+}
+
+input[type="text"],
+#card-element {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para mensagens de erro */
+#error-message {
+    color: #e74c3c;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Estilos para mensagens de sucesso */
+#success-message {
+    color: #28a745;
+    font-size: 16px;
+    margin-top: 10px;
+}

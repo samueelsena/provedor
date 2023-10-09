@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout</title>
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Se estiver usando jQuery -->
+    <script>
+        var stripe = Stripe('your_publishable_key'); // Substitua pelo sua chave pública do Stripe
+        var elements = stripe.elements();
+
+        var style = {
+            base: {
+                color: '#32325d',
+                lineHeight: '18px',
+                fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
+                fontSmoothing: 'antialiased',
+                fontSize: '16px',
+                '::placeholder': {
+                    color: '#aab7c4'
+                }
+            }
+        };
+
+        var cardElement = elements.create('card', {style: style});
+        cardElement.mount('#card-element');
+
+        var form = document.getElementById('payment-form');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            stripe.createToken(cardElement, {
+                name: document.getElementById('name').value
+            }).then(function(result) {
+                if (result.error) {
+                    // Exibir erros ao usuário
+                } else {
+                    // Enviar token de pagamento para o servidor para processamento
+                    var token = result.token.id;
+
+                    // Enviar token e outros dados para o seu servidor para processamento
+                    // Aqui você deve implementar a lógica de processamento do pagamento
+
+                    // Após o processamento bem-sucedido, redirecione o usuário para uma página de confirmação
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <!-- Seu conteúdo HTML -->
+</body>
+</html>
+
+
+
+<form id="payment-form">
+    <div class="form-row">
+        <label for="card-element">
+            Informações do cartão de crédito
+        </label>
+        <div id="card-element">
+            <!-- Elemento do cartão de crédito do Stripe -->
+        </div>
+    </div>
+
+    <div class="form-row">
+        <label for="name">
+            Nome no cartão
+        </label>
+        <input type="text" id="name">
+    </div>
+
+    <button type="submit">Pagar</button>
+</form>

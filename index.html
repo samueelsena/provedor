@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>BR Net - Seu Provedor de Internet</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="https://netbr.com.br/wp-content/uploads/2016/07/logo_netbr_ld.png" alt="BR Net Logo">
+            </div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#planos">Planos</a></li>
+                <li><a href="#sobre">Sobre Nós</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout</title>
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Se estiver usando jQuery -->
+    <script>
+        var stripe = Stripe('your_publishable_key'); // Substitua pelo sua chave pública do Stripe
+        var elements = stripe.elements();
+
+        var style = {
+            base: {
+                color: '#32325d',
+                lineHeight: '18px',
+                fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
+                fontSmoothing: 'antialiased',
+                fontSize: '16px',
+                '::placeholder': {
+                    color: '#aab7c4'
+                }
+            }
+        };
+
+        var cardElement = elements.create('card', {style: style});
+        cardElement.mount('#card-element');
+
+        var form = document.getElementById('payment-form');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            stripe.createToken(cardElement, {
+                name: document.getElementById('name').value
+            }).then(function(result) {
+                if (result.error) {
+                    // Exibir erros ao usuário
+                } else {
+                    // Enviar token de pagamento para o servidor para processamento
+                    var token = result.token.id;
+
+                    // Enviar token e outros dados para o seu servidor para processamento
+                    // Aqui você deve implementar a lógica de processamento do pagamento
+
+                    // Após o processamento bem-sucedido, redirecione o usuário para uma página de confirmação
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <!-- Seu conteúdo HTML -->
+</body>
+</html>
+
+
+    <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout</title>
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Para usar jQuery -->
+</head>
+<body>
+    <!-- Seu conteúdo HTML -->
+</body>
+</html>
+
+
+    <!DOCTYPE html>
+<html>
+<head>
+    <!-- Seu código de cabeçalho existente -->
+</head>
+<body>
+    <header>
+        <!-- Seu cabeçalho existente -->
+    </header>
+
+    <div class="whatsapp-float">
+        <a href="https://api.whatsapp.com/send?phone=5521971313883" target="_blank">
+            <img src="whatsapp-icon.png" alt="WhatsApp">
+            <span>Entre em Contato via WhatsApp</span>
+        </a>
+    </div>
+
+    <!-- O restante do seu conteúdo HTML -->
+</body>
+</html>
+
+    
+
+    <section id="home">
+        <div class="hero">
+            <h1>Bem-vindo à BR Net</h1>
+            <p>Conectando você ao mundo com alta velocidade e confiabilidade.</p>
+            <a href="#planos" class="cta-button">Veja Nossos Planos</a>
+        </div>
+    </section>
+
+    <section id="planos">
+        <div class="planos-container">
+            <h2>Nossos Planos</h2>
+            <div class="plano">
+                <h3>Plano Básico</h3>
+                <p>Velocidade: 25 Mbps</p>
+                <p>Preço: R$ 49,90/mês</p>
+            </div>
+            <div class="plano">
+                <h3>Plano Premium</h3>
+                <p>Velocidade: 100 Mbps</p>
+                <p>Preço: R$ 79,90/mês</p>
+            </div>
+            <div class="plano">
+                <h3>Plano Ultra</h3>
+                <p>Velocidade: 250 Mbps</p>
+                <p>Preço: R$ 99,90/mês</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre">
+        <div class="sobre-container">
+            <h2>Sobre Nós</h2>
+            <p>Somos o provedor de internet líder no Brasil, oferecendo serviços de alta qualidade e suporte excepcional. Nossa missão é manter você conectado ao que mais importa.</p>
+        </div>
+    </section>
+
+    <section id="contato">
+        <div class="contato-container">
+            <h2>Entre em Contato</h2>
+            <p>Tem alguma pergunta? Estamos aqui para ajudar. Entre em contato conosco pelo telefone ou e-mail abaixo.</p>
+            <p>Telefone: (11) 1234-5678</p>
+            <p>E-mail: contato@brnet.com.br</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 BR Net - Seu Provedor de Internet</p>
+    </footer>
+
+    <a href="checkout.html">Assine nossa newsletter</a>
+
+</body>
+</html>
